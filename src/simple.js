@@ -31,7 +31,17 @@ console.log(additionObject(-5, -10));
 // Retournez un tableau avec uniquement des nombres impairs supérieurs à 0
 // Si le tab passé en paramètre est null, retournez un tableau vide
 function removeEvenNumbers(tab) {
-	// votre code
+
+	function isNotEven (number){
+		return(number%2 !=0);
+	}
+
+	if (tab != null) {
+		let tabImpairs = tab.filter(isNotEven);
+		return tabImpairs;
+	} else {
+		return [];
+	}
 }
 
 console.log(removeEvenNumbers([]));
