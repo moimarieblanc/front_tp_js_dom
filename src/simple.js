@@ -2,7 +2,12 @@
 // Ajoutez dans un second temps une propriété de type booléen
 // Retournez l'objet
 function createObject() {
-	// votre code
+	myObject = {
+		monParam1: '456',
+		monParam2: 'bonjour',
+		myBool: true
+	}
+	return myObject;
 }
 
 console.log(createObject());
@@ -12,7 +17,12 @@ console.log(createObject());
 // - absVal2: la valeur absolue du paramètre v2
 // - somme de v1 et v2
 function additionObject(v1, v2) {
-	// votre code
+	myObject = {
+		val1 : v1,
+		absVal2 : Math.abs(v2),
+		somme : v1+v2
+	}
+	return myObject;
 }
 
 console.log(additionObject(2, 6));
