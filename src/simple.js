@@ -52,19 +52,25 @@ console.log(removeEvenNumbers([-1, 1, 2, 0, 3, 4, 12, 11]));
 // moins un élément du tableau en entrée est un nombre et
 // qu'il a une valeur négative
 function testNumNeg(tab) {
-	// votre code
+	const isNUmNeg = (currentValue) => currentValue < 0;
+	return tab.some(isNUmNeg);
 }
 
-console.log(testNumNeg([1, "kiwi", true, -2]));
+console.log(testNumNeg([2, "kiwi", true, -2]));
 console.log(testNumNeg([0, "orange", false]));
 console.log(testNumNeg([0, 4, 8]));
+
 
 // Complétez la fonction ci-dessous pour retourner un
 // tableau contenant la table de multiplication (jusqu'à 10 inclus)
 // du nombre passé en paramètre, par exemple :
 // n = 5 : [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50]
 function multTable(n) {
-	// votre code
+	myTab=[];
+	for (i=0; i<=10; i++){
+		myTab.push(i*n);
+	}
+	return myTab;
 }
 
 console.log("Table de multiplication de 1", multTable(1));
@@ -75,7 +81,11 @@ console.log("Table de multiplication de 5", multTable(5));
 // (jusqu'à 10 inclus) pour les nombres allant de 0 à la valeur d'un
 // paramètre max (inclus)
 function multTables(max) {
-	// votre code
+	myFullTab = [];
+	for(j=1; j<=5 ; j++) {
+		myFullTab.push(multTable(j)) ;
+	}
+	return myFullTab;
 }
 
 console.log(multTables(5));
